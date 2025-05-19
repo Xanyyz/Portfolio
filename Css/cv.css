@@ -1,0 +1,189 @@
+/* ========== GÉNÉRAL ========== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ========== HEADER PRINCIPAL ========== */
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a5c0f4;
+}
+
+/* ========== SECTION INTRO CV ========== */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cv-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cv-section h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cv-section p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+/* ========== CONTAINER DU CV ========== */
+.cv-container {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* ========== HEADER DANS LE CV ========== */
+.cv-container > header {
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.cv-container > header h1 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.cv-container > header p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* ========== COLONNES DU CV ========== */
+main.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.left-column {
+  flex: 1;
+  min-width: 250px;
+  max-width: 35%;
+}
+
+.right-column {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* ========== SECTIONS ET TITRES ========== */
+section h2 {
+  font-size: 1.5em;
+  color: #2980b9;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+h3 {
+  color: #34495e;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ========== LIENS ========== */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  color: #2c3e50;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.linkedin-link svg {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  main.content {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+

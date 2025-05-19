@@ -1,0 +1,201 @@
+:root {
+  --blue-light: #87CEEB;
+  --blue-dark: #1E3A8A;
+  --gray-light: #F3F4F6;
+  --white: #ffffff;
+  --text-dark: #1F2937;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, var(--blue-light), #E0F7FA);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: var(--white);
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: var(--blue-dark);
+}
+
+section {
+  padding: 3rem 2rem;
+  background-color: var(--gray-light);
+  margin: 1rem 0;
+}
+
+h2 {
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+
+/* Compétences */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(135, 206, 235, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  cursor: default;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.skill svg {
+  margin-bottom: 0.5rem;
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+
+.skill span {
+  font-weight: 600;
+  color: var(--blue-dark);
+}
+
+.skill img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+/* Formulaire de contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: var(--blue-dark);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #163f9c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--blue-dark);
+}
+
+footer a.linkedin-link {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: color 0.3s;
+}
+
+footer a.linkedin-link:hover {
+  color: #0a66c2; /* Bleu LinkedIn */
+}
+
+/* Boutons */
+.btn-container {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  background-color: var(--blue-dark);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #163f9c;
+}
+
+.btn-secondary {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #5fb1ea;
+}
+

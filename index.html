@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Enora Ndjoku</title>
+  <link rel="stylesheet" href="Css/index.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Enora Ndjoku</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#contact">Contact</a>
+      <a href="Html/bts.html">BTS SIO</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Bienvenue sur mon portfolio</h2>
+    <p>Je suis Enora Ndjoku, en première année de BTS SIO, option SLAM.</p>
+  </section>
+
+  <section id="about">
+  <h2>À propos</h2>
+  <p>Depuis le collège, je suis passionnée par le monde de l'informatique. Cette curiosité m’a naturellement conduite à m’orienter vers des études dans ce domaine. Aujourd’hui, je poursuis un BTS SIO (Services Informatiques aux Organisations) avec l’objectif clair de devenir développeuse.
+Je suis motivée, curieuse et toujours prête à apprendre de nouvelles technologies pour progresser dans ce métier qui me passionne.</p>
+
+  <div class="btn-container">
+    <a href="Pdf/Enora Ndjoku (1).pdf" download class="btn">Télécharger mon CV</a>
+    <a href="Html/cv.html" class="btn btn-secondary">Voir mon CV en HTML/CSS</a>
+  </div>
+</section>
+
+
+  <section id="skills">
+  <h2>Compétences</h2>
+  <div class="skills-grid">
+  <div class="skill">
+    <img src="Images/html5.svg" alt="HTML" />
+    <span>HTML</span>
+  </div>
+  <div class="skill">
+    <img src="Images/css.svg" alt="CSS" />
+    <span>CSS</span>
+  </div>
+  <div class="skill">
+    <img src="Images/javascript.svg" alt="JavaScript" />
+    <span>JavaScript</span>
+  </div>
+  <div class="skill">
+    <img src="Images/python.svg" alt="Python" />
+    <span>Python</span>
+  </div>
+  <div class="skill">
+    <img src="Images/mysql.svg" alt="MySQL" />
+    <span>MySQL</span>
+  </div>
+  <div class="skill">
+    <img src="Images/mariadb.svg" alt="MariaDB" />
+    <span>MariaDB</span>
+  </div>
+  <div class="skill">
+    <img src="Images/redis.svg" alt="Redis" />
+    <span>Redis</span>
+  </div>
+  <div class="skill">
+    <img src="Images/vscodium.svg" alt="VS Code" />
+    <span>VS Codium</span>
+  </div>
+  <div class="skill">
+    <img src="Images/replit.svg" alt="Replit" />
+    <span>Replit</span>
+  </div>
+  <div class="skill">
+    <img src="Images/github.svg" alt="GitHub" />
+    <span>GitHub</span>
+  </div>
+  <div class="skill">
+    <img src="Images/gitlab.svg" alt="GitLab" />
+    <span>GitLab</span>
+  </div>
+</div>
+
+</section>
+
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="https://formsubmit.co/ndjokuenora@gmail.com" method="POST" class="contact-form">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label for="name">Prénom et Nom</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="subject">Objet</label>
+      <input type="text" id="subject" name="subject" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+  <p>&copy; 2025 Enora Ndjoku</p>
+  <p>
+    <a href="https://www.linkedin.com/in/enora-ndjoku-73819b290/?originalSubdomain=fr" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+      <!-- Icône LinkedIn SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#1E3A8A" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7 0h4.8v2.2h.1c.67-1.28 2.3-2.6 4.7-2.6 5 0 5.9 3.3 5.9 7.6V24h-5v-7.6c0-1.8-.03-4.1-2.5-4.1-2.5 0-2.9 2-2.9 4v7.7h-5V8z"/>
+      </svg>
+      LinkedIn
+    </a>
+  </p>
+</footer>
+
+
+  <script type="module" src="Javascript/"></script>
+
+</body>
+</html>
