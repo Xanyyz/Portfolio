@@ -161,7 +161,9 @@ footer {
   color: var(--blue-dark);
 }
 
-footer a.linkedin-link {
+/* Style commun aux liens du footer */
+footer a.linkedin-link,
+footer a.github-link {
   color: var(--blue-dark);
   text-decoration: none;
   font-weight: bold;
@@ -172,9 +174,15 @@ footer a.linkedin-link {
   transition: color 0.3s;
 }
 
+/* Hover personnalisé */
 footer a.linkedin-link:hover {
   color: #0a66c2; /* Bleu LinkedIn */
 }
+
+footer a.github-link:hover {
+  color: #333; /* Couleur foncée de GitHub */
+}
+
 
 @media (max-width: 600px) {
   .cards-container {
@@ -202,3 +210,35 @@ footer a.linkedin-link:hover {
   min-height: 120px;
   white-space: pre-line;
 }
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background-color: var(--blue-dark);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #163f9c;
+}
+
+.btn-secondary {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #5fb1ea;
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message envoyé</title>
+  <link rel="stylesheet" href="../Css/index.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #e0f2ff, #ffffff);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: var(--blue-dark);
+      padding: 2rem;
+    }
+
+    .success-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .success-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .success-container p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      animation: typing 3s steps(40, end), blink .75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--blue-dark);
+      max-width: 100%;
+    }
+
+    .success-container a {
+      padding: 0.8rem 1.5rem;
+      background-color: var(--blue-dark);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .success-container a:hover {
+      background-color: #1E3A8A;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <h1>Merci pour votre message !</h1>
+    <p>Votre message a bien été envoyé.</p>
+    <a href="../index.html">Retour à l’accueil</a>
+  </div>
+</body>
+</html>

@@ -1,139 +1,128 @@
-/* ========== GÉNÉRAL ========== */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #333;
+:root {
+  --blue-light: #87CEEB;
+  --blue-dark: #1E3A8A;
+  --gray-light: #F3F4F6;
+  --white: #ffffff;
+  --text-dark: #1F2937;
 }
 
-/* ========== HEADER PRINCIPAL ========== */
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, var(--blue-light), #E0F7FA);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
 header {
-  background-color: #1e3a8a;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
+  font-size: 1.8rem;
+  color: var(--blue-dark);
   margin: 0;
-  font-size: 2.5em;
 }
 
-nav {
+header nav {
   margin-top: 10px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+header nav a {
   margin: 0 10px;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #a5c0f4;
+header nav a:hover {
+  color: #0a66c2;
 }
 
-/* ========== SECTION INTRO CV ========== */
+/* ===== MAIN CONTENT / CENTRAGE CV ===== */
 main {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.cv-section {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.cv-section h2 {
-  font-size: 2em;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-
-.cv-section p {
-  color: #555;
-  font-size: 1.1em;
-}
-
-/* ========== CONTAINER DU CV ========== */
-.cv-container {
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-/* ========== HEADER DANS LE CV ========== */
-.cv-container > header {
-  text-align: center;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-}
-
-.cv-container > header h1 {
-  font-size: 2em;
-  color: #2c3e50;
-  margin: 0;
-}
-
-.cv-container > header p {
-  font-size: 1em;
-  color: #666;
-}
-
-/* ========== COLONNES DU CV ========== */
-main.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.left-column {
   flex: 1;
-  min-width: 250px;
-  max-width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* ===== CV FEUILLE A4 STYLE ===== */
+.cv-container {
+  width: 794px;
+  min-height: 1123px;
+  background-color: var(--white);
+  padding: 40px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+/* ===== COLONNES ===== */
+.left-column {
+  width: 35%;
+  padding-right: 20px;
+  border-right: 2px solid #ddd;
 }
 
 .right-column {
-  flex: 2;
-  min-width: 300px;
+  width: 65%;
+  padding-left: 20px;
 }
 
-/* ========== SECTIONS ET TITRES ========== */
-section h2 {
-  font-size: 1.5em;
-  color: #2980b9;
-  border-bottom: 1px solid #ddd;
+/* ===== TITRES ===== */
+.name {
+  font-size: 2.2em;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.1em;
+  color: var(--blue-dark);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
-  margin-top: 30px;
+  text-transform: uppercase;
 }
 
 h3 {
-  color: #34495e;
-  margin-top: 15px;
-  font-size: 1.1em;
-}
-
-section {
-  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 1em;
+  color: var(--blue-dark);
 }
 
 ul {
   padding-left: 20px;
+  margin-top: 10px;
 }
 
-li {
-  margin-bottom: 8px;
+ul li {
+  margin-bottom: 6px;
 }
 
-/* ========== LIENS ========== */
 a {
-  color: #2980b9;
+  color: var(--blue-dark);
   text-decoration: none;
 }
 
@@ -141,48 +130,70 @@ a:hover {
   text-decoration: underline;
 }
 
-strong {
-  color: #2c3e50;
+.date {
+  display: block;
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #777;
 }
 
-/* ========== FOOTER ========== */
+/* ===== FOOTER ===== */
 footer {
-  background-color: #1e3a8a;
-  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 60px;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--blue-dark);
 }
 
-footer a {
-  color: #93c5fd;
+/* Style commun aux liens du footer */
+footer a.linkedin-link,
+footer a.github-link {
+  color: var(--blue-dark);
   text-decoration: none;
   font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: color 0.3s;
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* Hover personnalisé */
+footer a.linkedin-link:hover {
+  color: #0a66c2; /* Bleu LinkedIn */
 }
 
-.linkedin-link svg {
-  vertical-align: middle;
-  margin-right: 6px;
+footer a.github-link:hover {
+  color: #333; /* Couleur foncée de GitHub */
 }
 
-/* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
-  main.content {
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 850px) {
+  main {
+    padding: 20px;
+  }
+
+  .cv-container {
+    width: 100%;
     flex-direction: column;
+    padding: 20px;
   }
 
   .left-column,
   .right-column {
-    max-width: 100%;
+    width: 100%;
+    padding: 0;
+    border: none;
   }
 
-  nav a {
+  .left-column {
+    margin-bottom: 30px;
+  }
+
+  header nav a {
     display: block;
-    margin: 10px 0;
+    margin: 5px 0;
   }
 }
 
