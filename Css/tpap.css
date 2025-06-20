@@ -1,0 +1,141 @@
+:root {
+  --blue-light: #87CEEB;
+  --blue-dark: #1E3A8A;
+  --gray-light: #F3F4F6;
+  --text-dark: #1F2937;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, var(--blue-light), #E0F7FA);
+  color: var(--text-dark);
+}
+
+header {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #333;
+}
+
+.intro {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: var(--blue-dark);
+}
+
+.animated-text {
+  animation: fadeInUp 1.2s ease-out both;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.tp-section {
+  padding: 2rem;
+  background-color: var(--gray-light);
+}
+
+.tp-section h3 {
+  text-align: center;
+  color: var(--blue-dark);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.tp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tp-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.tp-card h4 {
+  margin-top: 0;
+  color: var(--blue-dark);
+}
+
+.tp-card p {
+  color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+  color: var(--blue-dark);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--blue-dark);
+}
+
+/* Style commun aux liens du footer */
+footer a.linkedin-link,
+footer a.github-link {
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: color 0.3s;
+}
+
+/* Hover personnalisé */
+footer a.linkedin-link:hover {
+  color: #0a66c2; /* Bleu LinkedIn */
+}
+
+footer a.github-link:hover {
+  color: #333; /* Couleur foncée de GitHub */
+}
