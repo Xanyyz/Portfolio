@@ -1,149 +1,243 @@
+/* -------------------- */
+/* STYLE GLOBAL FUTURISTE BLEU CIEL */
+/* -------------------- */
+@import url('https://images.ladepeche.fr/api/v1/images/view/5fcc5bdb8fe56f24a87b9225/large/image.jpg?v=1');
+
 :root {
-  --blue-light: #87CEEB;
-  --blue-dark: #1E3A8A;
-  --white: #ffffff;
-  --gray-light: #f0f4f8;
+    --bleu: #5cbef5;
+    --bleu-clair: #a4dcff;
+    --bleu-foncé: #3f99d4;
+    --fond-clair: #f6fbff;
+    --fond-section: rgba(255, 255, 255, 0.75);
+    --ombre: rgba(92, 190, 245, 0.35);
+    --texte: #0a1a2f;
 }
 
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #ffffff);
-  color: #1f2937;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--texte);
+    background: linear-gradient(135deg, #ffffff 0%, #d4eeff 100%);
+    overflow-x: hidden;
 }
 
+/* -------------------- */
+/* NAVIGATION */
+/* -------------------- */
 header {
-  padding: 1.5rem 2rem;
-  background-color: rgba(255, 255, 255, 0.95);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: var(--fond-clair);
+    padding: 1rem;
+    box-shadow: 0 2px 10px var(--ombre);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1 {
-  color: var(--blue-dark);
-  font-size: 1.7rem;
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.7rem;
 }
 
-nav a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: var(--blue-dark);
-  font-weight: bold;
-  transition: color 0.3s;
+.navbar .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    color: var(--bleu-foncé);
+    font-weight: 700;
+    margin-right: 2rem;
 }
 
-nav a:hover {
-  color: #333;
+.navbar a {
+    color: var(--texte);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-main {
-  padding: 2rem;
+.navbar a:hover,
+.navbar .active {
+    color: var(--bleu);
 }
 
-section {
-  margin-bottom: 3rem;
-  background-color: var(--gray-light);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
+/* -------------------- */
+/* INTRO ANIMÉE */
+/* -------------------- */
+.intro-section {
+    padding: 120px 20px 80px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffffaa, #d8f0ffdd),
+                url('https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80') center/cover no-repeat;
+    backdrop-filter: blur(5px);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+.intro-section h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: var(--bleu-foncé);
+    text-shadow: 0 0 10px var(--bleu);
+    animation: fadeSlide 1.3s ease;
 }
 
-h2 {
-  color: var(--blue-dark);
-  margin-bottom: 1rem;
+.intro-section p {
+    max-width: 850px;
+    margin: 20px auto 0;
+    font-size: 1.2rem;
+    color: var(--bleu);
+    animation: fadeIn 2s ease;
 }
 
-.theme-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  justify-content: center;
-  margin-top: 1rem;
+/* -------------------- */
+/* SECTIONS */
+/* -------------------- */
+.theme-section {
+    margin: 80px auto;
+    padding: 40px 25px;
+    max-width: 1200px;
+    background: var(--fond-section);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px var(--ombre);
+    transition: 0.3s ease;
+}
+
+.theme-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px var(--ombre);
+}
+
+.theme-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--bleu-foncé);
+    margin-bottom: 20px;
+    border-left: 5px solid var(--bleu);
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-section p,
+.theme-section li {
+    line-height: 1.7em;
+    font-size: 1.05em;
+}
+
+.theme-section ul {
+    padding-left: 15px;
+    list-style: none;
+}
+
+.theme-section li::before {
+    content: "• ";
+    color: var(--bleu);
+}
+
+/* -------------------- */
+/* BADGES — THÈMES SUIVIS */
+/* -------------------- */
+.themes-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .badge {
-  background-color: var(--blue-light);
-  color: var(--blue-dark);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, var(--bleu), var(--bleu-clair));
+    color: var(--bleu-foncé);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 0 10px var(--ombre);
+    transition: 0.3s ease;
 }
 
-.veille-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+.badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--bleu);
 }
 
-.veille-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+/* -------------------- */
+/* CARTES — EXEMPLES CONCRETS */
+/* -------------------- */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-.veille-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 16px rgba(30, 58, 138, 0.2);
+.card {
+    display: block;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(92, 190, 245, 0.2);
 }
 
-.veille-card h3 {
-  font-size: 1.1rem;
-  color: var(--blue-dark);
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px var(--ombre);
 }
 
-.veille-card .source {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.5rem;
+.card h3 {
+    color: var(--bleu-foncé);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
 }
 
+.card p {
+    color: var(--bleu);
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
 
-/* Footer */
+/* -------------------- */
+/* ARTICLES LIST */
+/* -------------------- */
+#articles h3 {
+    color: var(--bleu-foncé);
+    margin-top: 35px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#articles a {
+    color: var(--bleu-foncé);
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#articles a:hover {
+    text-decoration: underline;
+    color: var(--bleu);
+}
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--blue-dark);
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #eaf6ff;
+    color: var(--bleu-foncé);
+    font-weight: 600;
+    margin-top: 60px;
+    box-shadow: 0 -4px 10px rgba(92, 190, 245, 0.1);
 }
 
-/* Style commun aux liens du footer */
-footer a.linkedin-link,
-footer a.github-link {
-  color: var(--blue-dark);
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  transition: color 0.3s;
+/* -------------------- */
+/* ANIMATIONS */
+/* -------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/* Hover personnalisé */
-footer a.linkedin-link:hover {
-  color: #0a66c2; /* Bleu LinkedIn */
-}
-
-footer a.github-link:hover {
-  color: #333; /* Couleur foncée de GitHub */
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
