@@ -421,3 +421,75 @@ footer svg {
     margin: 0.4rem 0.3rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================= */
+/* DROPDOWN NAVBAR – INDEX */
+/* ========================= */
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+/* Contenu déroulant */
+.dropdown-content {
+  position: absolute;
+  top: 140%;
+  left: 0;
+
+  min-width: 220px;
+  padding: 0.6rem;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+
+  z-index: 200;
+}
+
+/* Affichage au hover */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Liens internes */
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue-dark);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Hover des liens */
+.dropdown-content a:hover {
+  background: rgba(30, 58, 138, 0.1);
+  transform: translateX(4px);
+}
+
